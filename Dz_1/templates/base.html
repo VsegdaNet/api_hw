@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Моя первая HTML страница {% endblock %}</title>
+</head>
+<body>
+    {% block header %}
+    {% endblock %}
+
+    {% block menu %}
+    <nav>
+        <a href="{{ url_for('index') }}">Главная</a>
+        <a href="{{ url_for('get_clothing') }}">Одежда</a>
+        <a href="{{ url_for('get_footwear') }}">Обувь</a>
+        <a href="{{  url_for('get_jacket') }}">Куртка</a>
+    </nav>
+    {%endblock%}
+
+    {% block content %}
+
+    {% endblock %}
+
+
+    {% block footer %}
+    <p>Это подвал</p>
+    {% endblock %}
+</body>
+</html>
